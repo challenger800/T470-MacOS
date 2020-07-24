@@ -47,7 +47,7 @@ This repo contains the files and scripts to install macOS on the Lenovo T470
 - [x] Internal camera (including Facetime)
 - [x] Trackpad, Trackpoint and physical buttons (including gestures)
 - [x] Sleep / Wake / Shutdown / Reboot (lid sleep and lid wake)
-- [x] Keyboard (including F1 Mute, F2 Volume, - F3 Volume +, F5 Brightness-, F6 Brightness +) 
+- [x] Keyboard (including F1 Mute, F2 Volume-, F3 Volume+, F5 Brightness-, F6 Brightness+) 
 - [x] SD Card Reader
 - [x] Intel WiFi and bluetooth are working except the Airdrop and AirPlay and Handoff
 
@@ -56,20 +56,20 @@ This repo contains the files and scripts to install macOS on the Lenovo T470
 
 #### BEFORE:
 
-If (LEqual (Arg0, 0x03))
-        {
-            \NVSS (0x00)
-            Store (\_SB.PCI0.LPCB.EC.AC._PSR (), \PWRS)
+If (LEqual (Arg0, 0x03))</br>
+        {</br>
+            \NVSS (0x00)</br>
+            Store (\_SB.PCI0.LPCB.EC.AC._PSR (), \PWRS)</br>
 
 
 #### AFTER:
 
-If (LEqual (Arg0, 0x03))
-        {
-            \NVSS (0x00)
-            \_SB.PCI0.LPCB.EC.LED (Zero, 0x80)
-            \_SB.PCI0.LPCB.EC.LED (0x0A, 0x80)
-            Store (\_SB.PCI0.LPCB.EC.AC._PSR (), \PWRS)
+If (LEqual (Arg0, 0x03))</br>
+        {</br>
+            \NVSS (0x00)</br>
+            \_SB.PCI0.LPCB.EC.LED (Zero, 0x80)</br>
+            \_SB.PCI0.LPCB.EC.LED (0x0A, 0x80)</br>
+            Store (\_SB.PCI0.LPCB.EC.AC._PSR (), \PWRS)</br>
 
 # Windows Time Fix
 Run following command with Administrator privileges in CMD:
