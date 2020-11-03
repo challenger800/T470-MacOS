@@ -70,6 +70,19 @@ If (LEqual (Arg0, 0x03))</br>
             \_SB.PCI0.LPCB.EC.LED (Zero, 0x80)</br>
             \_SB.PCI0.LPCB.EC.LED (0x0A, 0x80)</br>
             Store (\_SB.PCI0.LPCB.EC.AC._PSR (), \PWRS)</br>
+            
+#Maintained by: RehabMan for: Laptop Patches
+#system_Shutdown_restart.txt
+
+
+# This patch is to fix "restart after shutdown" caused by the xHCI controller.
+# by setting XHC.PMEE = 0 after _PTS processing (Arg0 == 5), we can avoid restart after shutdown.
+
+
+into method label _PTS code_regex ([\s\S]*) replace_matched
+begin
+%1\n
+        If (5 == Arg0) { \\_SB.PCI0.XHC.PMEE = 0 }
 
 # Windows Time Fix
 Run following command with Administrator privileges in CMD:
