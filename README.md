@@ -74,10 +74,8 @@ If (LEqual (Arg0, 0x03))</br>
 This patch is to fix "restart after shutdown" caused by the xHCI controller.
  by setting XHC.PMEE = 0 after _PTS processing (Arg0 == 5), we can avoid restart after shutdown.
  
-INSERT INTO DSDT.DSL UNDER _PTS
-into method label _PTS code_regex ([\s\S]*) replace_matched
-begin
-%1\n
+INSERT INTO DSDT.DSL into method label _PTS </br>
+
         If (5 == Arg0) { \\_SB.PCI0.XHC.PMEE = 0 }
 
 # Windows Time Fix
