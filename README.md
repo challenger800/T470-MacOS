@@ -60,8 +60,6 @@ If (LEqual (Arg0, 0x03))</br>
         {</br>
             \NVSS (0x00)</br>
             Store (\_SB.PCI0.LPCB.EC.AC._PSR (), \PWRS)</br>
-
-
 #### AFTER:
 
 If (LEqual (Arg0, 0x03))</br>
@@ -71,11 +69,12 @@ If (LEqual (Arg0, 0x03))</br>
             \_SB.PCI0.LPCB.EC.LED (0x0A, 0x80)</br>
             Store (\_SB.PCI0.LPCB.EC.AC._PSR (), \PWRS)</br>
             
-#system_Shutdown_restart fixed
+# System_Shutdown_restart fixed
 
 This patch is to fix "restart after shutdown" caused by the xHCI controller.
  by setting XHC.PMEE = 0 after _PTS processing (Arg0 == 5), we can avoid restart after shutdown.
-
+ 
+INSERT INTO DSDT.DSL UNDER _PTS
 into method label _PTS code_regex ([\s\S]*) replace_matched
 begin
 %1\n
