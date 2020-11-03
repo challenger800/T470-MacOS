@@ -52,7 +52,7 @@ This repo contains the files and scripts to install macOS on the Lenovo T470
 - [x] Intel WiFi and bluetooth are working except the Airdrop and AirPlay and Handoff
 
 # PATCH TO STOP POWER/THINKPAD LED FROM "BREATHING" UPON WAKE
-### INSERT INTO DSDT.DSL UNDER OWAK
+INSERT INTO DSDT.DSL UNDER OWAK
 
 #### BEFORE:
 
@@ -71,13 +71,10 @@ If (LEqual (Arg0, 0x03))</br>
             \_SB.PCI0.LPCB.EC.LED (0x0A, 0x80)</br>
             Store (\_SB.PCI0.LPCB.EC.AC._PSR (), \PWRS)</br>
             
-#Maintained by: RehabMan for: Laptop Patches
-#system_Shutdown_restart.txt
+#system_Shutdown_restart fixed
 
-
-# This patch is to fix "restart after shutdown" caused by the xHCI controller.
-# by setting XHC.PMEE = 0 after _PTS processing (Arg0 == 5), we can avoid restart after shutdown.
-
+This patch is to fix "restart after shutdown" caused by the xHCI controller.
+ by setting XHC.PMEE = 0 after _PTS processing (Arg0 == 5), we can avoid restart after shutdown.
 
 into method label _PTS code_regex ([\s\S]*) replace_matched
 begin
