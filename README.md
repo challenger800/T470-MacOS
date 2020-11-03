@@ -76,7 +76,7 @@ This patch is to fix "restart after shutdown" caused by the xHCI controller.
  
 INSERT INTO DSDT.DSL into method label _PTS </br>
 
-        If (5 == Arg0) { \\_SB.PCI0.XHC.PMEE = 0 }
+        If (5 == Arg0) { \_SB.PCI0.XHC.PMEE = 0 }
 
 # Windows Time Fix
 Run following command with Administrator privileges in CMD:
