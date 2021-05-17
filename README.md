@@ -5,6 +5,9 @@ This repo contains the files and scripts to install macOS on the Lenovo T470
 - [x] macOS 10.15.4
 - [x] macOS 10.15.5
 - [x] macOS 10.15.6 
+- [x] macOS 10.15.7 
+- [x] macOS 11.2.3 
+- [x] macOS 11.3.1 
 
 # Laptop's Hardware
 - <b>Model</b>: Thinkpad T470 
@@ -40,7 +43,7 @@ This repo contains the files and scripts to install macOS on the Lenovo T470
 - [x] Intel HD 520 Graphics (incuding graphics acceleration)
 - [x] CPU Power Management
 - [x] Battery
-- [x] All USB ports
+- [x] All USB ports the USB need to do a definition for each port since macOS 11.3.1
 - [x] HDMI port (including HDMI Audio)
 - [x] Intel I219-LM Ethernet port
 - [x] Realtek ALC298 Audio (including headphones jack)
