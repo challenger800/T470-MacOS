@@ -6,8 +6,9 @@ This repo contains the files and scripts to install macOS on the Lenovo T470
 - [x] macOS 10.15.5
 - [x] macOS 10.15.6 
 - [x] macOS 10.15.7 
-- [x] macOS 11.2.3 
-- [x] macOS 11.3.1 
+- [x] macOS 11.2.3 bigsur
+- [x] macOS 11.3.1 bigsur
+- [x] Opencore 0.7.4 support macOS 12.1  Monterey
 
 # Laptop's Hardware
 - <b>Model</b>: Thinkpad T470 
@@ -52,7 +53,7 @@ This repo contains the files and scripts to install macOS on the Lenovo T470
 - [x] Sleep / Wake / Shutdown / Reboot (lid sleep and lid wake)
 - [x] Keyboard (including F1 Mute, F2 Volume-, F3 Volume+, F5 Brightness-, F6 Brightness+) 
 - [x] SD Card Reader
-- [x] Intel WiFi and bluetooth are working except the Airdrop and AirPlay and Handoff
+- [x] Intel WiFi and bluetooth are working except the Airdrop and AirPlay and Handoff，and there is some issue of Bluetooth when update to MacOS 12.01 Monterey
 
 # PATCH TO STOP POWER/THINKPAD LED FROM "BREATHING" UPON WAKE
 INSERT INTO DSDT.DSL UNDER OWAK
